@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Prediksi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef6fb;
+            padding: 30px;
+            text-align: center;
+        }
+        .result-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        a {
+            text-decoration: none;
+            color: #3498db;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>{{ prediction_text }}</h2>
+        <a href="/">← Kembali ke Form</a>
+    </div>
+</body>
+</html>
