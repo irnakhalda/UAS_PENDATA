@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediksi Kanker Tiroid Kambuh</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f6ff;
+            padding: 20px;
+            color: #333;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Prediksi Kekambuhan Kanker Tiroid</h2>
+    <form action="/predict" method="post">
+        Age: <input type="number" name="Age" required><br>
+
+        Gender: <input type="text" name="Gender" required><br>
+        Smoking: <input type="text" name="Smoking" required><br>
+        Hx Smoking: <input type="text" name="Hx Smoking" required><br>
+        Hx Radiothreapy: <input type="text" name="Hx Radiothreapy" required><br>
+        Thyroid Function: <input type="text" name="Thyroid Function" required><br>
+        Physical Examination: <input type="text" name="Physical Examination" required><br>
+        Adenopathy: <input type="text" name="Adenopathy" required><br>
+        Pathology: <input type="text" name="Pathology" required><br>
+        Focality: <input type="text" name="Focality" required><br>
+        Risk: <input type="text" name="Risk" required><br>
+        T: <input type="text" name="T" required><br>
+        N: <input type="text" name="N" required><br>
+        M: <input type="text" name="M" required><br>
+        Stage: <input type="text" name="Stage" required><br>
+        Response: <input type="text" name="Response" required><br>
+
+        <input type="submit" value="Prediksi">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
